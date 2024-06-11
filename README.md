@@ -5,17 +5,29 @@ This repository contains the code and resources for the DS5111su24 lab project. 
 ## Project Structure
 
 tzs5dd_DS5111su24_lab_01/
+
 ├── .gitignore
+
 ├── Dockerfile
+
 ├── Makefile
+
 ├── README.md
+
 ├── get_the_books.sh
+
 ├── raven_counts.sh
+
 ├── raven_line_count.sh
+
 ├── raven_word_count.sh
+
 ├── requirements.txt
+
 ├── text_processing.py
+
 ├── total_lines.sh
+
 └── total_words.sh
 
 
