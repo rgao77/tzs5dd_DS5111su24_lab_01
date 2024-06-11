@@ -28,3 +28,18 @@ total_lines:
 total_words:
 	bash total_words.sh
 
+# Task to set up the Python virtual environment and install required packages
+setup_env:
+    python3 -m venv env
+    ./env/bin/pip install --upgrade pip
+    ./env/bin/pip install -r requirements.txt
+
+# Task to run tests
+test:
+    ./env/bin/pytest
+
+# Task to run pylint
+lint:
+    ./env/bin/pylint text_processing.py
+
+
