@@ -1,6 +1,7 @@
 import pytest
 from text_processing import clean_text
 
+
 @pytest.mark.parametrize("text,expected", [
     ("But the Raven, sitting lonely on the placid bust, spoke only That one word, as if his soul in that one word he did outpour.",
      "but the raven sitting lonely on the placid bust spoke only that one word as if his soul in that one word he did outpour")
