@@ -1,4 +1,5 @@
-# Default task: display the contents of the Makefile
+# Defaul
+t task: display the contents of the Makefile
 default:
 	cat Makefile
 
@@ -27,4 +28,23 @@ total_lines:
 # Task to count the total number of words in all files
 total_words:
 	bash total_words.sh
+
+# Task to set up the Python virtual environment and install required packages
+setup_env:
+	python3 -m venv env
+	./env/bin/pip install --upgrade pip
+	./env/bin/pip install -r requirements.txt
+
+# Task to run tests
+test:
+	./env/bin/pytest
+
+# Task to run pylint
+lint:
+	./env/bin/pylint text_processing.py
+
+
+# Task to run the demo script
+demo:
+	./env/bin/python demo_text_processing.py
 
