@@ -1,4 +1,5 @@
-# Default task: display the contents of the Makefile
+# Defaul
+t task: display the contents of the Makefile
 default:
 	cat Makefile
 
@@ -30,16 +31,16 @@ total_words:
 
 # Task to set up the Python virtual environment and install required packages
 setup_env:
-    python3 -m venv env
-    ./env/bin/pip install --upgrade pip
-    ./env/bin/pip install -r requirements.txt
+	python3 -m venv env
+	./env/bin/pip install --upgrade pip
+	./env/bin/pip install -r requirements.txt
 
 # Task to run tests
 test:
-    ./env/bin/pytest
+	./env/bin/pytest
 
 # Task to run pylint
 lint:
-    ./env/bin/pylint text_processing.py
+	./env/bin/pylint text_processing.py
 
 
