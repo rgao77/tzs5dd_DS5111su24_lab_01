@@ -44,3 +44,7 @@ lint:
 	./env/bin/pylint text_processing.py
 
 
+# Task to run the demo script
+demo:
+	./env/bin/python demo_text_processing.py
+
