@@ -1,6 +1,7 @@
-![Python package](https://github.com/rgao77/tzs5dd_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg)
 
 # DS5111su24 Lab Project
+
+![example workflow](https://github.com/rgao77/tzs5dd_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg)
 
 This repository contains the code and resources for the DS5111su24 lab project. The project involves downloading texts from Project Gutenberg, processing the texts, and performing various analyses.
 
@@ -40,5 +41,6 @@ tzs5dd_DS5111su24_lab_01/
 ```sh
 git clone git@github.com:rgao77/tzs5dd_DS5111su24_lab_01.git
 cd tzs5dd_DS5111su24_lab_01
+
 
 
