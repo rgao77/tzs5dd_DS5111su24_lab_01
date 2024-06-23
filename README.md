@@ -1,29 +1,44 @@
-# DS5111su24 Lab 01
+![Python package](https://github.com/rgao77/tzs5dd_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg)
 
-# Edgar Allan Poe Book Analysis
+# DS5111su24 Lab Project
 
-This repository contains scripts for downloading and analyzing books by Edgar Allan Poe from Project Gutenberg.
+This repository contains the code and resources for the DS5111su24 lab project. The project involves downloading texts from Project Gutenberg, processing the texts, and performing various analyses.
 
-## Repository Contents
+## Project Structure
 
-- `.gitignore`: Specifies files and directories to be ignored by Git.
-- `Makefile`: Contains tasks for downloading books and running analysis scripts.
-- `get_the_books.sh`: Script to download 10 books by Edgar Allan Poe.
-- `raven_line_count.sh`: Script to count the number of lines in "The Raven".
-- `raven_word_count.sh`: Script to count the number of words in "The Raven".
-- `raven_counts.sh`: Script to count the occurrences of the word 'raven' in different cases in "The Raven".
-- `total_lines.sh`: Script to count the total number of lines in all downloaded books.
-- `total_words.sh`: Script to count the total number of words in all downloaded books.
+tzs5dd_DS5111su24_lab_01/
+├── .github/
+│   └── workflows/
+│       └── validations.yml
+├── .gitignore
+├── Dockerfile
+├── Makefile
+├── README.md
+├── get_the_books.sh
+├── raven_counts.sh
+├── raven_line_count.sh
+├── raven_word_count.sh
+├── requirements.txt
+├── text_processing.py
+├── total_lines.sh
+├── total_words.sh
+└── tests/
+    ├── test_bash_comparison.py
+    ├── test_clean_text.py
+    ├── test_count_words.py
+    ├── test_japanese_version.py
+    ├── test_le_corbeau.py
+    ├── test_os_specific.py
+    ├── test_python_version.py
+    ├── test_text_processing.py
+    └── test_tokenize.py
 
-## Getting Started
+## Setup Instructions
 
-### Prerequisites
+### Clone the Repository
 
-- Git
-- wget
-
-### Cloning the Repository
-
-```bash
-git clone https://github.com/<your-username>/tzs5dd_DS5111su24_lab_01.git
+```sh
+git clone git@github.com:rgao77/tzs5dd_DS5111su24_lab_01.git
 cd tzs5dd_DS5111su24_lab_01
+
+
