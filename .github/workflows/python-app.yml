@@ -31,14 +31,13 @@ jobs:
       run: |
         pip install --upgrade pip
         pip install -r requirements.txt
-        echo "Dependencies installed."
 
     - name: Lint with pylint
       run: |
+        source env/bin/activate
         pylint text_processing.py
 
     - name: Run tests
       run: |
+        source env/bin/activate
         pytest
-
-
