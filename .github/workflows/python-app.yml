@@ -1,50 +1,44 @@
-name: Python application
+name: Python CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/tokenizer
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-<<<<<<< HEAD
+    - uses: actions/checkout@v3
 
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-
-=======
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         python-version: '3.8'
->>>>>>> origin/tokenizer
-    - name: Install dependencies
+
+    - name: Check Node Version
+      run: node -v
+
+    - name: Set up environment
       run: |
         python -m venv env
         source env/bin/activate
+        echo "Environment setup complete."
+
+    - name: Install dependencies
+      run: |
         pip install --upgrade pip
         pip install -r requirements.txt
-<<<<<<< HEAD
+        echo "Dependencies installed."
 
-=======
->>>>>>> origin/tokenizer
     - name: Lint with pylint
       run: |
-        source env/bin/activate
         pylint text_processing.py
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/tokenizer
-    - name: Test with pytest
+    - name: Run tests
       run: |
-        source env/bin/activate
         pytest
+
 
