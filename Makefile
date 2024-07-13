@@ -28,3 +28,18 @@ total_lines:
 total_words:
 	bash total_words.sh
 
+# Setup virtual environment and install dependencies
+setup:
+	python3 -m venv env
+	. env/bin/activate && pip install --upgrade pip
+	. env/bin/activate && pip install -r requirements.txt
+
+# Run tests
+test:
+	. env/bin/activate && pytest
+
+# Run linting
+lint:
+	. env/bin/activate && pylint text_processor.py
+
+
