@@ -1,5 +1,14 @@
 # DS5111su24 Lab 01
 
+![CI](https://github.com/<your-username>/tzs5dd_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg)
+
+## Edgar Allan Poe Book Analysis
+
+This repository contains scripts for downloading and analyzing books by Edgar Allan Poe from Project Gutenberg.
+
+
+# DS5111su24 Lab 01
+
 # Edgar Allan Poe Book Analysis
 
 This repository contains scripts for downloading and analyzing books by Edgar Allan Poe from Project Gutenberg.
@@ -30,5 +39,6 @@ This repository contains scripts for downloading and analyzing books by Edgar Al
 ```bash
 git clone https://github.com/rgao77/tzs5dd_DS5111su24_lab_01.git
 cd tzs5dd_DS5111su24_lab_01
+
 
 
