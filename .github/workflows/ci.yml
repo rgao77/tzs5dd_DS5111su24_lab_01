@@ -2,15 +2,11 @@ name: Python package
 
 on:
   push:
-    branches:
-      - week4/testing_word_processors
-  pull_request:
-    branches:
-      - week4/testing_word_processors
   workflow_dispatch:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -27,8 +23,11 @@ jobs:
           python -m venv venv
           . venv/bin/activate
           pip install -r requirements.txt
-      - name: Test with pytest
+      - name: Run tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: |
           . venv/bin/activate
           pytest -vvx tests/
+
 
