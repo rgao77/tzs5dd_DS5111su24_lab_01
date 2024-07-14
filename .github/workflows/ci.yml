@@ -1,14 +1,6 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - main
-      - week4/testing_word_processors
-  pull_request:
-    branches:
-      - main
-      - week4/testing_word_processors
+on: [push, pull_request]
 
 jobs:
   build:
@@ -21,17 +13,16 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.12
+        python-version: '3.12'
 
     - name: Install dependencies
       run: |
         python -m venv venv
-        . venv/bin/activate
-        pip install --upgrade pip
+        source venv/bin/activate
         pip install -r requirements.txt
 
     - name: Run tests
       run: |
-        . venv/bin/activate
+        source venv/bin/activate
         pytest
 
