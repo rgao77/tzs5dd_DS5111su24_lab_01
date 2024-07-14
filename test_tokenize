@@ -1,0 +1,23 @@
+# tests/test_tokenize.py
+import pytest
+from text_processor import clean_text, tokenize, count_words
+
+def test_tokenize():
+    text = 'But the Raven, sitting lonely on the placid bust, spoke only That one word, as if his soul in that one word he did outpour.'
+    expected = ['but', 'the', 'raven', 'sitting', 'lonely', 'on', 'the', 'placid', 'bust', 'spoke', 'only', 'that', 'one', 'word', 'as', 'if', 'his', 'soul', 'in', 'that', 'one', 'word', 'he', 'did', 'outpour']
+    result = tokenize(text)
+    assert result == expected, f"Failed to tokenize text: {result}"
+
+@pytest.mark.parametrize("file_path, expected_count", [
+    ("books/17192.txt", 100),
+    ("books/932.txt", 200),
+    ("books/1063.txt", 150),
+    ("books/10031.txt", 300),
+    ("books/14082.txt", 250)
+])
+def test_tokenize_file(file_path, expected_count):
+    with open(file_path, 'r') as f:
+        text = f.read()
+    tokens = tokenize(text)
+    assert len(tokens) == expected_count, f"Failed to tokenize file: {file_path}"
+

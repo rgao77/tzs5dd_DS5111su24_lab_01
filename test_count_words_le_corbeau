@@ -1,0 +1,22 @@
+# text_processor.py
+import re
+import unicodedata
+from collections import Counter
+
+def clean_text(text):
+    # Normalize accented characters
+    text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('utf-8')
+    # Convert to lowercase
+    text = text.lower()
+    # Remove punctuation
+    text = re.sub(r'[^\w\s]', '', text)
+    return text
+
+def tokenize(text):
+    text = clean_text(text)
+    return text.split()
+
+def count_words(text):
+    tokens = tokenize(text)
+    return Counter(tokens)
+
