@@ -1,0 +1,6 @@
+echo "pytest==6.2.5" >> requirements.txt
+echo "iniconfig==2.0.0" >> requirements.txt
+echo "packaging==23.0" >> requirements.txt
+echo "pluggy==1.2.0" >> requirements.txt
+
+
