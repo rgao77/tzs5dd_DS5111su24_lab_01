@@ -14,6 +14,8 @@ This repository contains scripts for downloading and analyzing books by Edgar Al
 - `raven_counts.sh`: Script to count the occurrences of the word 'raven' in different cases in "The Raven".
 - `total_lines.sh`: Script to count the total number of lines in all downloaded books.
 - `total_words.sh`: Script to count the total number of words in all downloaded books.
+- `text_processor.py`: Contains functions for cleaning, tokenizing, and counting words in text.
+- `tests/`: Directory containing tests for the text processing functions.
 
 ## Getting Started
 
@@ -21,9 +23,12 @@ This repository contains scripts for downloading and analyzing books by Edgar Al
 
 - Git
 - wget
+- Python 3.12
 
 ### Cloning the Repository
 
 ```bash
-git clone https://github.com/<your-username>/tzs5dd_DS5111su24_lab_01.git
+git clone https://github.com/rgao77/tzs5dd_DS5111su24_lab_01.git
 cd tzs5dd_DS5111su24_lab_01
+
+
