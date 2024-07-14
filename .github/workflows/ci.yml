@@ -7,35 +7,29 @@ on:
   pull_request:
     branches:
       - week4/testing_word_processors
-  workflow_dispatch: # This allows you to manually trigger the workflow
+  workflow_dispatch:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         python-version: ["3.7"]
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        
+      - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-
       - name: Install dependencies
         run: |
           python -m venv venv
-          source venv/bin/activate
+          . venv/bin/activate
           pip install -r requirements.txt
-
-      - name: Run tests
+      - name: Test with pytest
         run: |
-          source venv/bin/activate
+          . venv/bin/activate
           pytest -vvx tests/
 
 
