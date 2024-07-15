@@ -48,4 +48,3 @@ def count_words(text):
         else:
             word_counts[word] = 1
     return word_counts
-
