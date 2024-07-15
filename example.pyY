@@ -1,0 +1,11 @@
+from .text_processor import clean_text, tokenize, count_words
+
+def example_usage():
+    text = "Hello, world! Hello!"
+    cleaned_text = clean_text(text)
+    tokens = tokenize(cleaned_text)
+    word_counts = count_words(cleaned_text)
+    print("Cleaned Text:", cleaned_text)
+    print("Tokens:", tokens)
+    print("Word Counts:", word_counts)
+

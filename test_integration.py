@@ -1,6 +1,7 @@
 import os
 import pytest
-from text_processor import clean_text, tokenize, count_words
+from pkg_dpy8wq.text_processor import clean_text, tokenize, count_words
+
 
 @pytest.mark.integration
 def test_integration_processing():
