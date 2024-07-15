@@ -34,15 +34,16 @@ setup:
         . env/bin/activate && pip install --upgrade pip
         . env/bin/activate && pip install -r requirements.txt
 
+# Run linting
+lint:
+        . env/bin/activate && pylint src/pkg_dpy8wq/*.py tests/*.py
+
 # Run tests
-test:
+test: lint
         . env/bin/activate && pytest -m "not integration" tests/
 
 # Run integration tests
 test-integration:
         . env/bin/activate && pytest -m "integration" tests/
 
-# Run linting
-lint:
-        . env/bin/activate && pylint text_processor.py
 
