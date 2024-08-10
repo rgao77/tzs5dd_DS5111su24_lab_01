@@ -43,4 +43,3 @@ jobs:
         run: |
           . env/bin/activate
           make test
-
