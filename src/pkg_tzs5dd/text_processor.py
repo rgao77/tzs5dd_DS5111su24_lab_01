@@ -1,3 +1,8 @@
+"""
+This module provides basic text processing functions such as cleaning text,
+tokenizing text, and counting word occurrences.
+"""
+
 import re
 from collections import Counter
 
@@ -38,4 +43,3 @@ def count_words(text):
     """
     words = tokenize(clean_text(text))
     return Counter(words)
-

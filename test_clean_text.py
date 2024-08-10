@@ -1,4 +1,3 @@
-# New import
-from pkg_tzs5dd import clean_text
-
+from src.pkg_tzs5dd import clean_text
+0
 
