@@ -4,11 +4,12 @@ on:
   push:
     branches:
       - main
-      - WEEK-06/shareable_package
+      - WEEK-08/pylint_refactor
   pull_request:
     branches:
       - main
-      - WEEK-06/shareable_package
+      - WEEK-08/pylint_refactor
+
 
 jobs:
   build:
@@ -41,4 +42,3 @@ jobs:
       run: |
         . env/bin/activate
         make test
-

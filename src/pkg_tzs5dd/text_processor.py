@@ -1,4 +1,8 @@
 """
+
+text_processor.py
+
+
 This module provides basic text processing functions such as cleaning text,
 tokenizing text, and counting word occurrences.
 """
@@ -7,6 +11,7 @@ import re
 from collections import Counter
 
 def clean_text(text):
+
     """
     Clean the input text by removing punctuation and converting to lowercase.
 
@@ -43,3 +48,4 @@ def count_words(text):
     """
     words = tokenize(clean_text(text))
     return Counter(words)
+
