@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - WEEK-08/pylint_refactor
+  pull_request:
+    branches:
+      - main
+      - WEEK-08/pylint_refactor
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Upgrade pip and install dependencies
+        run: |
+          python -m venv env
+          . env/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run lint
+        run: |
+          . env/bin/activate
+          make lint
+
+      - name: Run tests
+        run: |
+          . env/bin/activate
+          make test
+
+
