@@ -13,7 +13,3 @@ test:
 # Run integration tests
 test-integration:
 	. env/bin/activate && PYTHONPATH=src pytest -m "integration" tests/
-
-
-
-
